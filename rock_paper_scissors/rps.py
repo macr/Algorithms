@@ -5,10 +5,9 @@ import sys
 
 def rock_paper_scissors(n):
     hands = ['rock', 'paper', 'scissors']
-    base = len(hands)
     val = []
-    for i in range(base**n):
-        val.append([hands[i // base**(n-1-j) % base] for j in range(n)])
+    for i in range(3**n):
+        val.append([hands[i // 3**(n-1-j) % 3] for j in range(n)])
     return val
 
 
